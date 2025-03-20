@@ -8,57 +8,127 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="bg-center bg-cover bg-no-repeat h-[100vh] flex justify-center items-center" style="background-image: url(assets/img/wp.jpg);">
-        <div class="bg-white/75 backdrop-blur-md p-10 rounded-lg shadow-lg flex flex-col gap-y-2">
-            <div class="flex gap-4 items-center">
-                <img src="https://static-00.iconduck.com/assets.00/person-circle-icon-512x512-zwz8ctki.png" class="w-16 h-16" alt="">
-                <div class="flex flex-col gap-y-1">
-                    <h1 class="text-xl font-semibold">Haris S.</h1>
-                    <div class="flex items-center gap-1">
-                        <img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/location-512.png" class="w-6 h-6" alt="">
-                        <p class="text-slate-800 sub-text font-bold lg:block md:block sm:block hidden">Bandung</p><p class="text-slate-800 sub-text">Indonesia</p>
+<body class="bg-black">
+    <nav id="main-nav" class="fixed navbar flex items-center justify-between p-2 w-full">
+        <a class="navbar-brand ml-5" href="#">
+          <img src="assets/icon/hrisz-logo.png" alt="mainlogo" width="40" height="24">
+        </a>
+        <span class="lg:flex md:flex sm:flex hidden gap-4 justify-center md:ml-auto md:pr-10 sm:pr-4 items-center">
+
+            <!-- Home -->
+            <a href="#">
+                <button data-aos="fade-in" data-aos-duration="2000" data-aos-once="true" data-aos-delay="50" class="title-text border-2 border-transparent border-b-white shadow-transparent hover:border-b-[#4DA6FF] hover:border-x-[#4DA6FF] transition px-2 py-1 text-white text-sm flex items-center ml-auto hover:shadow-lg hover:shadow-[#4D4DFF]/50">
+                    HOME
+                </button>
+            </a>
+
+            <!-- About -->
+            <a href="#">
+                <button data-aos="fade-in" data-aos-duration="2000" data-aos-once="true" data-aos-delay="100" class="title-text border-2 border-transparent border-b-white shadow-transparent hover:border-b-[#4DA6FF] hover:border-x-[#4DA6FF] transition px-2 py-1 text-white text-sm flex items-center ml-auto hover:shadow-lg hover:shadow-[#4D4DFF]/50">
+                    ABOUT
+                </button>
+            </a>
+
+            <!-- Projects -->
+            <a href="#">
+                <button data-aos="fade-in" data-aos-duration="2000" data-aos-once="true" data-aos-delay="150" class="title-text border-2 border-transparent border-b-white shadow-transparent hover:border-b-[#4DA6FF] hover:border-x-[#4DA6FF] transition px-2 py-1 text-white text-sm flex items-center ml-auto hover:shadow-lg hover:shadow-[#4D4DFF]/50">
+                    PROJECTS
+                </button>
+            </a>
+
+            <!-- Contact -->
+            <a href="#">
+                <button data-aos="fade-in" data-aos-duration="2000" data-aos-once="true" data-aos-delay="200" class="title-text border-2 border-transparent border-b-white shadow-transparent hover:border-b-[#4DA6FF] hover:border-x-[#4DA6FF] transition px-2 py-1 text-white text-sm flex items-center ml-auto hover:shadow-lg hover:shadow-[#4D4DFF]/50">
+                    CONTACT
+                </button>
+            </a>
+            <a href="#">
+                <button class="border-2 md:flex sm:hidden border-transparent border-l-white shadow-transparent hover:border-l-[#4DA6FF] hover:border-b-[#4DA6FF] transition px-2 py-1 text-white text-sm flex items-center ml-auto hover:shadow-xl hover:shadow-[#4D4DFF]/50">
+                    <span>
+                        <img src="https://avatars.githubusercontent.com/u/60280111?v=4" class="navprofile rounded-full" alt="" width="30px">
+                    </span>
+                    <div class="flex flex-wrap -m-2">
+                        <div class="w-auto p-2 title-text">
+                            <h2 class="text-sm text-left px-2 hidden md:block">See my profile on</h1>
+                            <p class="text-sm font-semibold text-left text-sky-500 px-2 hidden md:block">GitHub</p>
+                        </div>
+                    </div>
+                </button>
+            </a>
+        </span>
+        <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider" data-dropdown-offset-distance="12" class="md:hidden sm:hidden block text-white focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+        </button>
+            
+        <!-- Dropdown menu -->
+        <div id="dropdownDivider" class="z-100 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#282828] dark:divide-gray-600">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDividerButton">
+                <li>
+                    <a href="#" class="sub-text block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About</a>
+                </li>
+                <li>
+                    <a href="#" class="sub-text block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Projects</a>
+                </li>
+                <li>
+                    <a href="#" class="sub-text block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contacts</a>
+                </li>
+            </ul>
+            <div class="py-2 flex items-center pl-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                <span><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="mb-1 w-4 h-4 brightness-0 invert" alt="githubicon"></span><a href="#" class="sub-text block px-2 py-2 text-sm text-white">GitHub</a>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="h-[100vh] flex items-center justify-center">
+        <div class="home-bg brightness-75">
+            <video preload="auto" autoplay muted loop playsinline>
+                <source src="assets/video/vid-bg.mp4" type="video/mp4" class="src-video">
+            </video>
+        </div>
+        <!-- Middle content -->
+        <div class="z-100 h-auto max-w-3xl md:container-lg md:mx-auto px-8 gap-y-2 flex flex-col justify-center items-center">
+            <img src="assets/img/1713895026875.jpg" data-aos="fade-up" class="justify-center rounded-full h-32 w-32" alt="">
+            <p data-aos="fade-up" data-aos-delay="200" class="text-white text-center text-3xl xs:text-3xl sm:text-4xl md:text-5xl font-medium drop-shadow-2xl">Hello! I'm <span class="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-violet-400 pr-1">Haris Saefuloh</span><span class="absolute w-6 md:w-10 h-6 md:h-10 inline-block text-indigo-400">
+                    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <path d="M138.7,175.5l-19.2,52.1a8,8,0,0,1-15,0L85.3,175.5a8.1,8.1,0,0,0-4.8-4.8L28.4,151.5a8,8,0,0,1,0-15l52.1-19.2a8.1,8.1,0,0,0,4.8-4.8l19.2-52.1a8,8,0,0,1,15,0l19.2,52.1a8.1,8.1,0,0,0,4.8,4.8l52.1,19.2a8,8,0,0,1,0,15l-52.1,19.2A8.1,8.1,0,0,0,138.7,175.5Z" fill="currentcolor"></path>
+                        <line x1="176" y1="16" x2="176" y2="64" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="200" y1="40" x2="152" y2="40" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="224" y1="72" x2="224" y2="104" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                        <line x1="240" y1="88" x2="208" y2="88" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                    </svg>
+                </span>
+            </p>
+            <p data-aos="fade-up" data-aos-delay="300" class="sub-text text-gray-500 md:text-sm text-xs text-center drop-shadow-2xl py-3 !leading-normal">
+                a passionate Game Developer and Front-End Developer with expertise in creating interactive applications and engaging digital experiences.
+            </p>
+            <div class="flex flex-col items-center">
+                <p data-aos="fade-up" data-aos-delay="400" class="sub-text pt-2 bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-purple-300 drop-shadow-2xl font-semibold">Reach me on:</p>
+                <div class="flex gap-4">
+                    <div data-aos="fade-right" data-aos-delay="500" class="md:w-32 sm:w-28 w-24 invert flex justify-center items-center">
+                        <a href="https://github.com/hrisz" target="_blank">
+                            <img src="https://www.pngplay.com/wp-content/uploads/12/GitHub-PNG-HD-Photos.png" alt="">
+                        </a>
+                    </div>
+                    <div class="flex justify-center items-center bg-clip-text text-transparent bg-gradient-to-r from-sky-300 to-purple-300">
+                        ✦
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="500" class="md:w-32 sm:w-28 w-24 brightness-0 invert flex justify-center items-center">
+                        <a href="https://www.linkedin.com/in/haris-saefuloh/" target="_blank">
+                            <img src="https://www.edigitalagency.com.au/wp-content/uploads/Linkedin-logo-blue-png-large-size.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
-            <p class="title-text">Role:</p>
-            <div class="flex gap-2">
-                <p class="bg-green-500 px-2 py-1 rounded-md text-white">Front-end Developer</p>
-                <p class="bg-sky-500 px-2 py-1 rounded-md text-white">Game Developer</p>
-            </div>
-            <div class="pt-5 flex flex-col">
-                <h1 class="text-lg font-semibold title-text pb-2 uppercase">about myself</h1>
-                <p class="text-slate-800 sub-text">Interested on developing game and front-end website, often use Tailwind for website development <br>and Godot Engine for game development.</p>
-            </div>
-            <div class="pt-5 pb-5 flex flex-col">
-                <h1 class="text-lg font-semibold title-text pb-2 uppercase">language and tools</h1>
-                <div class="flex items-center gap-1" dir="auto">
-                    <img class="w-10" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo-shadow.png" alt="">
-                    <img class="w-7 h-5" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png" alt="">
-                    <img class="w-7 h-7" src="https://i.namu.wiki/i/Bmws3Lut9SPDLijBh6RUMz9VtYxjrmXWjlZBF2dgeTYMOGAKntfH1VQnuinzwv7fmy2xoik3csUhyqrchSyKmQ.webp" alt="">
-                    <img class="w-7 h-7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="">
-                    <img class="w-7 h-7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1024px-HTML5_Badge.svg.png" alt="">
-                    <img class="w-7 h-7" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="">
-                    <img class="w-7 h-7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Godot_icon.svg/1200px-Godot_icon.svg.png" alt="">
-                </div>
-            </div>
-            <hr class="border-t-2 border-black">
-            <div class="flex gap-20 pt-2">
-                <div class="flex flex-col">
-                    <p class="font-bold sub-text">N/A</p>
-                    <p class="text-gray-500 title-text pt-1">Hourly rate</p>
-                </div>
-                <div class="flex flex-col">
-                    <p class="font-bold sub-text">N/A</p>
-                    <p class="text-gray-500 title-text pt-1">Total earned</p>
-                </div>
-                <div class="flex flex-col">
-                    <p class="font-bold sub-text">100+</p>
-                    <p class="text-gray-500 title-text pt-1">Hours worked</p>
-                </div>
-            </div>
         </div>
-    </div>
+    </section>
+    <!-- <section id="about" class="h-[100vh] flex items-center justify-center bg-[#121212]">
+
+    </section> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
 </html>
