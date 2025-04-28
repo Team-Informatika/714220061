@@ -22,7 +22,7 @@ nav {
     top: 0;
     left: 0;
     pointer-events: none;
-    background: url("../img/pre-load.jpg") no-repeat center;
+    background: url("../img/pre-load.webp") no-repeat center;
     background-size: cover;
     z-index: -2;
 }
